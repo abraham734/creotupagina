@@ -1,0 +1,151 @@
+.menu-wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.menu__item {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.menu__item-link {
+  z-index: 3;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 600;
+  color: #fff;
+  font-size: 4vh;
+  pointer-events: auto;
+  transition: color 0.3s ease;
+}
+
+/* 🔸 Línea naranja visible SIEMPRE */
+.menu__item-link::after {
+  content: '';
+  position: absolute;
+  bottom: 12px;
+  left: 25%;
+  width: 50%;
+  height: 3px;
+  background-color: #FFA500;
+  box-shadow: 0 0 8px #FFA500;
+  transition: all 0.3s ease;
+}
+
+.menu__item-link:hover {
+  color: #ffffff;
+}
+
+.menu__item-link:focus:not(:focus-visible) {
+  color: #fff;
+}
+
+.marquee {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 90%;
+  height: 80%;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 1;
+  mix-blend-mode: lighten;
+  margin: 6px 0;
+}
+
+.always-visible {
+  transform: translate3d(0, 0%, 0) !important;
+  pointer-events: none;
+}
+
+.marquee__inner-wrap {
+  height: 100%;
+  width: 200%;
+  display: flex;
+  transform: translateX(0);
+}
+
+.marquee__inner {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  width: 200%;
+  will-change: transform;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee span {
+  color: white;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 3vh;
+  line-height: 1.2;
+  padding: 1vh 1vw 0;
+}
+
+/* 🔸 Zoom aplicado SIEMPRE */
+.marquee__img {
+  width: 200px;
+  height: 7vh;
+  margin: 2em 2vw;
+  padding: 1em 0;
+  border-radius: 50px;
+  background-size: cover;
+  background-position: 50% 50%;
+  transform: scale(1.05);
+  transition: transform 0.4s ease;
+}
+
+.menu__item-link:hover + .marquee .marquee__img {
+  transform: scale(1.1);
+}
+
+.marquee-slow .marquee__inner {
+  animation-duration: 22s;
+}
+.marquee-medium .marquee__inner {
+  animation-duration: 18s;
+}
+.marquee-fast .marquee__inner {
+  animation-duration: 22s;
+}
+.reverse .marquee__inner {
+  animation-direction: reverse;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
