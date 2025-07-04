@@ -14,18 +14,6 @@ const PizzeriaDemo = () => {
 
       {/* Plano General */}
       <div className="bg-gradient-to-br from-red-50 to-yellow-50 rounded-2xl p-8 shadow-2xl border border-red-100 max-w-6xl mx-auto">
-        {/* Mock Browser Bar */}
-        <div className="flex items-center space-x-2 mb-6 pb-4 border-b border-red-200">
-          <div className="flex space-x-2">
-            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-            <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-          </div>
-          <div className="flex-1 bg-white rounded-md px-4 py-1 text-sm text-gray-600">
-            pizzerianonnalucia.com
-          </div>
-        </div>
-
         {/* Plano Entero */}
         <div className="rounded-xl overflow-hidden shadow-lg bg-[url('/ladrillos.jpg')] bg-cover bg-center p-8">
           {/* Header */}
@@ -102,6 +90,9 @@ const PizzeriaDemo = () => {
 };
 
 export default PizzeriaDemo;
+
+
+
 
 
 
