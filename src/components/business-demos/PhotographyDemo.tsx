@@ -17,18 +17,6 @@ function PhotographyDemo() {
 
       {/* Plano General */}
       <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl p-8 shadow-2xl border border-rose-100 max-w-6xl mx-auto">
-        {/* Mock Browser Bar */}
-        <div className="flex items-center space-x-2 mb-6 pb-4 border-b border-rose-200">
-          <div className="flex space-x-2">
-            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-            <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-          </div>
-          <div className="flex-1 bg-white rounded-md px-4 py-1 text-sm text-gray-600">
-            momentoseterno.com
-          </div>
-        </div>
-
         {/* Plano Entero */}
         <div
           className="rounded-xl p-8 shadow-lg relative"
@@ -143,6 +131,7 @@ function PhotographyDemo() {
 }
 
 export default PhotographyDemo;
+
 
 
 
