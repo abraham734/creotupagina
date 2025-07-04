@@ -31,9 +31,11 @@ function ClothingStoreDemo() {
         >
           <div className="backdrop-blur-sm bg-black/50 p-4 rounded-xl">
             {/* Header */}
-            <div className="flex flex-col md:flex-row justify-between items-center mb-8 px-4 py-3 border-b border-[#B38B59]">
-              <div className="font-unbounded text-3xl">ESTILO URBANO</div>
-              <nav className="flex flex-wrap gap-4 mt-2 md:mt-0 text-white font-medium">
+            <div className="flex flex-col md:flex-row justify-between items-center mb-6 md:mb-8 px-4 py-3 border-b border-[#B38B59]">
+              <div className="font-unbounded text-3xl text-center md:text-left">
+                ESTILO URBANO
+              </div>
+              <nav className="flex flex-wrap gap-4 mt-4 md:mt-0 text-white font-medium justify-center md:justify-start">
                 {["Hogar", "Catálogo", "Género", "News", "About", "Contacto"].map((item) => (
                   <a
                     key={item}
@@ -50,10 +52,10 @@ function ClothingStoreDemo() {
             <div className="flex flex-col md:flex-row gap-8">
               {/* Información y redes */}
               <div className="md:w-1/2 space-y-4 text-left">
-                <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-[#FEFEEE]">
+                <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-[#FEFEEE]">
                   NUEVA COLECCIÓN
                 </h1>
-                <p className="text-[#F1F1F1] text-lg max-w-md">
+                <p className="text-[#F1F1F1] text-base md:text-lg max-w-md">
                   Descubre lo último en moda urbana con nuestra colección de temporada. Prendas hechas para destacar.
                 </p>
                 <ul className="text-sm text-[#F1F1F1] space-y-1">
@@ -76,7 +78,7 @@ function ClothingStoreDemo() {
               </div>
 
               {/* Cuadro de imágenes */}
-              <div className="md:w-1/2 grid grid-cols-2 gap-6">
+              <div className="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
                 {[1, 2, 3, 4].map((num) => (
                   <div
                     key={num}
@@ -89,7 +91,7 @@ function ClothingStoreDemo() {
                       decoding="async"
                       className="aspect-video object-cover w-full"
                     />
-                    <div className="bg-[#113E21] text-white px-3 py-2 text-sm font-medium text-center tracking-wide">
+                    <div className="bg-[#113E21] text-white px-3 py-2 text-xs md:text-sm font-medium text-center tracking-wide">
                       Suéter Urban Classic - $250 USD<br />
                       ¡Disponible solo esta semana!
                     </div>
@@ -99,9 +101,9 @@ function ClothingStoreDemo() {
             </div>
 
             {/* Banner tubular */}
-            <div className="mt-12 w-full flex justify-center">
-              <div className="w-full md:w-[970px] h-[60px] bg-[#FEFEEE] rounded-full overflow-hidden flex items-center justify-center shadow-inner ring-1 ring-red-300">
-                <div className="animate-marquee whitespace-nowrap text-red-600 font-bold text-xl tracking-wider">
+            <div className="mt-8 md:mt-12 w-full flex justify-center">
+              <div className="w-full md:w-[970px] h-[50px] md:h-[60px] bg-[#FEFEEE] rounded-full overflow-hidden flex items-center justify-center shadow-inner ring-1 ring-red-300">
+                <div className="animate-marquee whitespace-nowrap text-red-600 font-bold text-base md:text-xl tracking-wider">
                   🔥 HOTSALE 🔥 &nbsp;&nbsp;&nbsp; 🔥 HOTSALE 🔥 &nbsp;&nbsp;&nbsp; 🔥 HOTSALE 🔥 &nbsp;&nbsp;&nbsp; 🔥 HOTSALE 🔥
                 </div>
               </div>
@@ -111,7 +113,7 @@ function ClothingStoreDemo() {
 
         {/* CTA Final */}
         <div className="text-center mt-8">
-          <Button className="bg-gradient-to-r from-gray-800 to-gray-600 hover:from-gray-900 hover:to-gray-700 text-white px-12 py-4 text-lg font-semibold transform hover:scale-105 transition-all duration-300">
+          <Button className="bg-gradient-to-r from-gray-800 to-gray-600 hover:from-gray-900 hover:to-gray-700 text-white px-8 md:px-12 py-4 text-lg font-semibold transform hover:scale-105 transition-all duration-300">
             Crear Mi Tienda Online
           </Button>
         </div>
@@ -121,6 +123,9 @@ function ClothingStoreDemo() {
 }
 
 export default ClothingStoreDemo;
+
+
+
 
 
 
