@@ -16,18 +16,6 @@ function BeautyClinicDemo() {
 
       {/* Plano General */}
       <div className="bg-gradient-to-br from-[#e7f1ff] to-[#f9fcff] rounded-2xl p-8 shadow-2xl border border-[#d0e7ff] max-w-6xl mx-auto">
-        {/* Mock Browser Bar */}
-        <div className="flex items-center space-x-2 mb-2 pb-3 border-b border-[#d0e7ff]">
-          <div className="flex space-x-2">
-            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-            <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-          </div>
-          <div className="flex-1 bg-white rounded-md px-4 py-1 text-sm text-gray-600">
-            epiclinic.com
-          </div>
-        </div>
-
         {/* Header de navegación */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-6">
           <div className="text-2xl font-bold text-[#081f5c]">Epiclinic</div>
@@ -227,6 +215,8 @@ function BeautyClinicDemo() {
 }
 
 export default BeautyClinicDemo;
+
+
 
 
 
